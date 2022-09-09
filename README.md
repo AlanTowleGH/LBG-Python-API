@@ -107,6 +107,7 @@ def test_item_builder_data(self):
         """
         expected = {'name': 'Tool', 'description': 'Hammer', 'price': 10.5, '_id': 99}
         self.assertEqual(item_builder("Tool", "Hammer", 10.50, 99), expected)
+        ```
 
 If we test the builder and input the name of "Tool", a description of "Hammer", a price of "10.5" and an _id of "99" we can expect an object to be created that matches this format. 
 
@@ -115,10 +116,11 @@ If we test the builder and input the name of "Tool", a description of "Hammer", 
 An example integration test is included in the project. 
 
 For integration tests we can test the RESTful end points.
-
+```python
 def test_create_post_request_status(self):
                 response = requests.post(BASE_URL + '/create', json = {'name': 'Tool', 'description': 'Hammer', 'price': 10.5})
                 self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+                ```
 
 If we test the POST end point by sending a request with a method of POST and a path of `/create` we should expect the response to be...
 Staus code: 201, Status text; Created
@@ -136,6 +138,8 @@ Scenario Outline: User adding a new item successfully
         Examples:
             | name |  description | price | _id |
             | Test Name | Test Description | 9.99 | 1 |
+
+        ```
 
 A user story has been used to create a behaviour driven test for the system. 
 
