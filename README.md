@@ -111,6 +111,7 @@ def test_item_builder_data(self):
 If we test the builder and input the name of "Tool", a description of "Hammer", a price of "10.5" and an _id of "99" we can expect an object to be created that matches this format. 
 
 #### Integration
+
 An example integration test is included in the project. 
 
 For integration tests we can test the RESTful end points.
